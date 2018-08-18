@@ -1,9 +1,7 @@
 <template>
   <div id="app" v-if="status === 'Ready'">
-    <Header v-bind:title="title"></Header>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <h1>{{hello}}</h1>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <Header v-bind:title="title"></Header> -->
+    <MoviesList></MoviesList>
   </div>
   <div v-else-if="status === 'Loading'">
     Loading ...
@@ -14,8 +12,8 @@
 </template>
  
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/Header.vue'
+import MoviesList from './components/MoviesList.vue'
 
 export default {
   name: 'app',
@@ -28,7 +26,7 @@ export default {
     };
   },
   components: {
-    HelloWorld,
+    MoviesList,
     Header
   }
 }

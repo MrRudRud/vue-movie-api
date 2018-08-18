@@ -1,7 +1,7 @@
 <template>
     <header>
         <h1>{{ title }}</h1>
-        <h1>{{ fullName }}</h1>
+        <!-- <h1>{{ fullName }}</h1> -->
     </header>
 </template>
 
