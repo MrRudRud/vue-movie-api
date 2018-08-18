@@ -1,7 +1,7 @@
 <template>
   <div id="app" v-if="status === 'Ready'">
-    <!-- <Header v-bind:title="title"></Header> -->
-    <MoviesList></MoviesList>
+    <Header v-bind:title="title"></Header>
+    <MoviesList/>
   </div>
   <div v-else-if="status === 'Loading'">
     Loading ...
