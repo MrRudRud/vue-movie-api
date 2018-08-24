@@ -1,14 +1,24 @@
 <template>
-    <img :src="posterImage" :alt="movie.title">
+    <router-link :to="moviePath">
+        <img :src="posterImage" :alt="movie.title">
+    </router-link>
 </template>
 
 <script>
     const POSTER_PATH = "https://image.tmdb.org/t/p/w154";
     export default {
         props: ['movie'],
+        data() {
+            return{
+                title: this.movie.title
+            }
+        },
         computed: {
             posterImage: function() {
                 return `${POSTER_PATH}${this.movie.poster_path}`;
+            },
+            moviePath: function() {
+                return `movie/${this.movie.id}`;
             }
         }
     };
