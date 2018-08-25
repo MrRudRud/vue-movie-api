@@ -1,4 +1,4 @@
-# rmMovieDB
+# VueMovieDB
 
 ## Project setup
 ```
