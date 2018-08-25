@@ -1,7 +1,10 @@
 <template>
     <header>
         <h1>{{ title }}</h1>
-        <!-- <h1>{{ fullName }}</h1> -->
+        <transition name="fade">
+            <h2 v-if="show">{{ fullName }}</h2>
+        </transition>
+        <button @click="show = !show ">press</button>
     </header>
 </template>
 
@@ -13,6 +16,7 @@
         },
         data() {
             return {
+                show: false,
                 firstName: 'Scott',
                 lastName: 'Bradly',
                 name: 'Scott'
@@ -35,5 +39,12 @@
         background-color: #111;
         padding: 10px;
         color: aliceblue;
+    }
+    .fade-enter-active, .fade-leave-active {
+        transition: all 0.3s ease;
+    }
+    .fade-enter, .fade-leave-to {
+        opacity: 0;
+        transform: scale(0);
     }
 </style>
