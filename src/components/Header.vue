@@ -1,9 +1,7 @@
 <template>
     <header>
         <h1>{{ title }}</h1>
-        <transition name="fade">
             <h2 v-if="show">{{ fullName }}</h2>
-        </transition>
         <button @click="show = !show ">press</button>
     </header>
 </template>
@@ -40,11 +38,5 @@
         padding: 10px;
         color: aliceblue;
     }
-    .fade-enter-active, .fade-leave-active {
-        transition: all 0.3s ease;
-    }
-    .fade-enter, .fade-leave-to {
-        opacity: 0;
-        transform: scale(0);
-    }
+
 </style>
