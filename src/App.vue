@@ -17,6 +17,7 @@ export default {
   data() {
     return {
       title: "Vue Movie DB",
+      show: true,
     };
   },
   components: {
@@ -32,7 +33,17 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+
+  /* padding-top: 0px; */
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .fade-enter-active, .fade-leave-active {

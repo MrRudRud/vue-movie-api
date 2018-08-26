@@ -24,7 +24,9 @@
         computed: {
             styles() {
                 return {
-                    background: `url(${BACKDROP_PATH}/${this.movie.backdrop_path}) no-repeat`
+                    background: `url(${BACKDROP_PATH}/${this.movie.backdrop_path}) no-repeat`,
+                    height: `50%`,
+                    width: `100%`
                 }
             }
         },
@@ -46,13 +48,13 @@
 <style scoped>
     .movie-wrapper {
         position: relative;
-        padding-top: 50vh;
+        padding-top: 100vh;
         background-size: cover;
     }
     .movie-info {
         background: #fff;
         color: #222;
-        padding: 2rem 10%;
+        padding: 5rem 10%;
     }
 
 .fade-enter-active, .fade-leave-active {

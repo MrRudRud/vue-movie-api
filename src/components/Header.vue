@@ -1,8 +1,8 @@
 <template>
     <header>
-        <h1>{{ title }}</h1>
-            <h2 v-if="show">{{ fullName }}</h2>
-        <button @click="show = !show ">press</button>
+        <!-- <h1>{{ title }}</h1> -->
+            <h1 v-if="show">{{ title }}</h1>
+        <button @click="show = !show">Back</button>
     </header>
 </template>
 
